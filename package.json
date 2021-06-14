@@ -1,0 +1,27 @@
+{
+    "name": "electron_libraries",
+    "version": "1.0.0",
+    "description": "An app to test different electron tools.",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
+        "dev": "electron ."
+    },
+    "keywords": [
+        "electronjs",
+        "javascript",
+        "nodejs"
+    ],
+    "author": "Alejandro Gallego",
+    "license": "ISC",
+    "dependencies": {
+        "electron": "^10.1.3",
+        "electron-builder": "^22.8.1",
+        "electron-context-menu": "^2.3.0",
+        "electron-unhandled": "^3.0.2",
+        "electron-util": "^0.14.2",
+        "gsap": "^3.5.1",
+        "xel": "0.0.230"
+    }
+}

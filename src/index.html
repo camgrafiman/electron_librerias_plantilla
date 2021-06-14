@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <h1>ELECTRON JS </h1>
+    <div id="texto">...</div>
+
+</body>
+
+<script>
+    const BrowserWindow = require('electron').remote.BrowserWindow;
+    const {
+        ipcRenderer
+    } = require('electron');
+    const {
+        is,
+        activeWindow
+    } = require('electron-util');
+
+
+    ipcRenderer.on('loaded', (evento, args) => {
+        console.log(evento, args);
+        texto.innerHTML = args.desdeload;
+
+    })
+
+    ipcRenderer.send('load', 'ping')
+    console.log("Ventana: ", activeWindow());
+</script>
+
+</html>
